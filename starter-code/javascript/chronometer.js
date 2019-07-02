@@ -16,10 +16,10 @@ class Chronometer {
   }
 
   getMinutes() {
-    return Math.floor(Math.floor(this.currentTime / 1000) / 60);
+    return Math.floor(Math.floor(this.currentTime / 100) / 60);
   }
   getSeconds() {
-    return Math.floor((this.currentTime - this.getMinutes() * 60 * 1000) / 100);
+    return Math.floor((this.currentTime - this.getMinutes() * 60 * 100) / 100);
   }
   twoDigitsNumber(num) {
     return num < 10 ? `0${num}` : `${num}`;
